@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@500&display=swap');
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+* {
+  box-sizing: border-box;
+}
+.home_text{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: calc(35px + (35 - 16) * ((100vw - 768px) / (1280 - 768)));
+}
+.image{
+  width: 100%;
+  overflow: hidden;
+}
+.navbar div:hover{
+  transition: all 0.8sec;
+  border-bottom: rgb(129, 191, 202) solid 2px;
+}
+
+.Info{
+  font-family: 'Courier New', Courier, monospace;
+}
+.Typing_efffect{
+  width: 0ch;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 7s steps(30) infinite;
+  border-right: 1px solid black;
+  font-size: 16px;
+}
+.hello{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+@keyframes typing {
+  0% {
+    width: 0ch;
+  }
+  80% {
+    width: 30ch;
+  }
+  100% {
+    width: 0ch;
+  }
+}
+.projectcard{
+  opacity: 1;
+  animation: fading 2500ms linear;
+}
+@keyframes fading {
+  0% {
+    opacity: 0;
+  }
+  80%{
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.Cardbutton{
+  border: 2px solid black;
+  color: white;
+  background-color: black;
+  
+}
+.Cardbutton:hover{
+  background-color: white !important;
+  color: black;
+}
+.mobile_icon{
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  .Header_logo {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .navbar_close{
+   font-size: 70% !important;
+   display: none;
+  }
+  .navbar_show{
+    transition: 4s all;
+   font-size: 70% !important;
+   display: block;
+   padding: 3px 0;
+   transition: 2s all;
+  }
+  .navbar_div{
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .home_container{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .About{
+    font-size: 70% !important;
+  }
+  .footer{
+    font-size: 70% !important;
+  }
+  .Typing_efffect{
+    font-size: 10px;
+  }
+  .card_image{
+    height: 18rem !important;
+  }
+  .mobile_icon{
+    display: block !important;
+  }
+}
