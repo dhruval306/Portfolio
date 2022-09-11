@@ -45,8 +45,8 @@ const Projects = [
         Name: "Portfolio Website",
         ImageLink:"https://i.ibb.co/h1fCdc0/image.png",
         Description:"This is kind of clone application of netflex. It is react application with the use of contexAPI.",
-        WebsiteLink:"",
-        GithubCode:"https://github.com/dhruval306/Portfolio_DhruvalSoni"
+        WebsiteLink:"https://portfolio-dhruval306.vercel.app/",
+        GithubCode:"https://github.com/dhruval306/Portfolio"
     },
     
 ]
