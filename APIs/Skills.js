@@ -28,18 +28,14 @@ const SkillList = [
         skillName: 'VueJS'
     },
      {
-        id: 9,
-        skillName: 'VueJS'
-    },
-     {
-        id: 10,
+        id: 8,
         skillName: 'NextJS'
     },
     {
-        id: 11,
+        id: 9,
         skillName: 'SQL'
     },{
-        id: 12,
+        id: 10,
         skillName: 'MongoDB'
     },
 ]
