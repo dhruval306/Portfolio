@@ -26,15 +26,15 @@ a {
 }
 
 .Info{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .Typing_efffect{
   width: 0ch;
   overflow: hidden;
   white-space: nowrap;
   animation: typing 7s steps(30) infinite;
-  border-right: 1px solid black;
-  font-size: 16px;
+  border-right: 3px solid black;
+  font-size: 16px !important;
 }
 .hello{
   display: flex;
@@ -83,9 +83,13 @@ a {
   display: none;
 }
 @media only screen and (max-width: 600px) {
+  .navbar_logo{
+    width: 50px !important;;
+    height: 50px !important;;
+  }
   .Header_logo {
-    width: 50px !important;
-    height: 50px !important;
+    width: 100% !important;
+    height: 300px !important;
   }
   .navbar_close{
    font-size: 70% !important;
@@ -121,5 +125,12 @@ a {
   }
   .mobile_icon{
     display: block !important;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .Header_logo {
+    width: 100% !important;
+    height: 300px !important;
+    margin-bottom: 15px;
   }
 }

@@ -10,7 +10,7 @@ const [showNavbar, setshowNavbar] = useState(false);
     <HomeContainer className="navbar_div">
         <NavbarMain>
             <Header>
-                <Logo className='Header_logo' src='https://i.ibb.co/k9ZsQhJ/IMG-20210114-WA0006.jpg'/>
+                <Logo className='navbar_logo' src='https://i.ibb.co/k9ZsQhJ/IMG-20210114-WA0006.jpg'/>
             </Header>
             <MobileView>
                 <Icon className="mobile_icon" onClick={() => {
