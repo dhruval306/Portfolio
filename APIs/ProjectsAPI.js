@@ -4,7 +4,7 @@ const Projects = [
         id: 1,
         Name: "Uber-Clone",
         ImageLink:"https://i.ibb.co/FggNxKF/image.png",
-        Description:"I created uber-clone application. The technology used behind this application are VueJS, ReactJS, React Hooks, Firebase, Tailwind CSS. I used APIs of mapbox to find the location and calculate the cost of ride ",
+        Description:"Developed module of well-known application Uber. Features includes pixel perfect design, search locations, calculate distance and cost of ride depend on vehicle.",
         WebsiteLink:"https://uber-clone-ghdrdrlis-dhruval306.vercel.app/Login",
         GithubCode:"https://github.com/dhruval306/uber_Clone"
     },
@@ -44,7 +44,7 @@ const Projects = [
         id: 6,
         Name: "Portfolio Website",
         ImageLink:"https://i.ibb.co/nz3n5s8/image.png",
-        Description:"This is kind of clone application of netflex. It is react application with the use of contexAPI.",
+        Description:"This is portfolio website to get more information about myself. It is developed on next.js, React, Tailwind and styled components",
         WebsiteLink:"https://portfolio-dhruval306.vercel.app/",
         GithubCode:"https://github.com/dhruval306/Portfolio"
     },

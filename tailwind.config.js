@@ -3,11 +3,16 @@ module.exports = {
     media: false, // or 'media' or 'class'
     theme: {
       extend: {
-         display: ["group-hover"],
+        
+        display: ["group-hover"],
         animation: {
         'bounce_once': 'bounce 2s linear 1.5',
         'bounce_page': 'bounce 2s linear 0.5',
       }
+
+      },
+      scale: {
+        '102': '1.02',
       },
       screens: {
        'sm': '600px',

@@ -3,7 +3,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: monospace;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
 }
 a {
   color: inherit;
@@ -41,7 +41,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  
 }
 @keyframes typing {
   0% {
@@ -57,6 +57,7 @@ a {
 .projectcard{
   opacity: 1;
   animation: fading 2500ms linear;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 @keyframes fading {
   0% {
