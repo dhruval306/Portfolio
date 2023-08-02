@@ -11,7 +11,7 @@ const Projects = [
     {
         id: 2,
         Name: "SpringAuth System",
-        ImageLink:"https://i.ibb.co/PxXJLsq/Refine-Blogs-4-copy-24.png",
+        ImageLink:"https://i.ibb.co/kBDYSKQ/download.png",
         Description:"developed a complete backend application for user login and registration using Spring Boot. The application includes features such as email verification links to ensure secure user registration.",
         WebsiteLink:"",
         GithubCode:"https://github.com/dhruval306/UserAuthentication"
