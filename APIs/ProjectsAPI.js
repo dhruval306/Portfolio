@@ -10,6 +10,14 @@ const Projects = [
     },
     {
         id: 2,
+        Name: "SpringAuth System",
+        ImageLink:"https://i.ibb.co/PxXJLsq/Refine-Blogs-4-copy-24.png",
+        Description:"developed a complete backend application for user login and registration using Spring Boot. The application includes features such as email verification links to ensure secure user registration.",
+        WebsiteLink:"",
+        GithubCode:"https://github.com/dhruval306/UserAuthentication"
+    },
+    {
+        id: 3,
         Name: "MechTech",
         ImageLink:"https://i.ibb.co/X81Lw34/mechtech.png",
         Description:"This Web application is based on MERN stack development. This is online store for all mechanics to grow their business where they can get appointments online with their customers.",
@@ -17,7 +25,7 @@ const Projects = [
         GithubCode:"https://github.com/dhruval306/Mechtech"
     },
     {
-        id: 3,
+        id: 4,
         Name: "One Stop Jewel",
         ImageLink:"https://i.ibb.co/khDLZK9/onestop.png",
         Description:"This POS system created in JAVA language in spring and hibernet framework. I used JSP life cycle for front-end part and SQL databse to store all the data of application. This web application is usefull for specially wholesale jewellary businessman. We introduce new payment system for this application.",
@@ -25,7 +33,7 @@ const Projects = [
         GithubCode:"https://github.com/dhruval306/OneStopJewel"
     },
     {
-        id: 4,
+        id: 5,
         Name: "Tracker",
         ImageLink:"https://i.ibb.co/b1zdsPx/tracker.png",
         Description:"I created Tracker application to track the data of employee. It is react website where I used redux framework to manage the data flow of web application",
@@ -33,7 +41,7 @@ const Projects = [
         GithubCode:"https://github.com/dhruval306/Tracker"
     },
     {
-        id: 5,
+        id: 6,
         Name: "Netfilx-clone",
         ImageLink:"https://i.ibb.co/SQKSsvC/netflix.png",
         Description:"This is kind of clone application of netflix. It is react application with the use of contexAPI.",
@@ -41,7 +49,7 @@ const Projects = [
         GithubCode:"https://github.com/dhruval306/Netflix"
     },
     {
-        id: 6,
+        id: 7,
         Name: "Portfolio Website",
         ImageLink:"https://i.ibb.co/nz3n5s8/image.png",
         Description:"This is portfolio website to get more information about myself. It is developed on next.js, React, Tailwind and styled components",
