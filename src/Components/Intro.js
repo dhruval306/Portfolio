@@ -12,7 +12,7 @@ const Intro = () => {
               data-nimg='1'
               decoding='async'
               loading='lazy'
-              src='https://i.ibb.co/23xg22t/portfolio-img.png'
+              src='https://i.ibb.co/kxXY3cS/dhruval2.webp'
               className='w-24 h-24 sm:h-40 sm:w-40 object-cover border-4 border-white rounded-full shadow-md profile-image'
             />
           </div>
