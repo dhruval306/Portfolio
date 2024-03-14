@@ -29,6 +29,15 @@ const Projects = [
     },
     {
         id: 4,
+        Name: "Microservices Architecture",
+        ImageLink:"https://i.ibb.co/my0bGN6/microservice.png",
+        Technology: "Java 17, Spring Boot, Kafka, KeyClock, Spring Security, Spring Data JPA, Eureka, MySQL, MongoDB, Docker".
+        Description:"This project is a comprehensive approach to microservice architecture. It encompasses high-level and logical architecture design, service construction, inter-process communication, service discovery with Netflix Eureka, API Gateway establishment using Spring Cloud Gateway, secure microservices authentication via Keycloak, circuit breaker implementation, Kafka-based event-driven architecture, and Dockerization for seamless deployment.",
+        WebsiteLink:"",
+        GithubCode:"https://github.com/dhruval306/Spring_boot-Microservices"
+    },
+    {
+        id: 5,
         Name: "One Stop Jewel",
         ImageLink:"https://i.ibb.co/khDLZK9/onestop.png",
         Technology: "Java 8, Spring, Hibernate, JSP, Ajax, JavaScript, MySQL",
@@ -37,7 +46,7 @@ const Projects = [
         GithubCode:"https://github.com/dhruval306/OneStopJewel"
     },
     {
-        id: 5,
+        id: 6,
         Name: "Tracker",
         ImageLink:"https://i.ibb.co/b1zdsPx/tracker.png",
         Technology: "",
@@ -46,7 +55,7 @@ const Projects = [
         GithubCode:"https://github.com/dhruval306/Tracker"
     },
     {
-        id: 6,
+        id: 7,
         Name: "Netfilx-clone",
         ImageLink:"https://i.ibb.co/SQKSsvC/netflix.png",
         Technology: "",
