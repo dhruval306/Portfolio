@@ -31,7 +31,7 @@ const Projects = [
         id: 4,
         Name: "Microservices Architecture",
         ImageLink:"https://i.ibb.co/my0bGN6/microservice.png",
-        Technology: "Java 17, Spring Boot, Kafka, KeyClock, Spring Security, Spring Data JPA, Eureka, MySQL, MongoDB, Docker".
+        Technology: "Java 17, Spring Boot, Kafka, KeyClock, Spring Security, Spring Data JPA, Eureka, MySQL, MongoDB, Docker",
         Description:"This project is a comprehensive approach to microservice architecture. It encompasses high-level and logical architecture design, service construction, inter-process communication, service discovery with Netflix Eureka, API Gateway establishment using Spring Cloud Gateway, secure microservices authentication via Keycloak, circuit breaker implementation, Kafka-based event-driven architecture, and Dockerization for seamless deployment.",
         WebsiteLink:"",
         GithubCode:"https://github.com/dhruval306/Spring_boot-Microservices"
