@@ -2,6 +2,15 @@ import React from "react";
 const Projects = [
     {
         id: 1,
+        Name: "Microservices Architecture",
+        ImageLink:"https://i.ibb.co/V2b88hd/microservice.png",
+        Technology: "Java 17, Spring Boot, Kafka, KeyClock, Spring Security, Spring Data JPA, Eureka, MySQL, MongoDB, Docker",
+        Description: "This project is a comprehensive approach to microservice architecture. It encompasses high-level and logical architecture design, service construction, inter-process communication, service discovery with Netflix Eureka, API Gateway establishment using Spring Cloud Gateway, secure microservices authentication via Keycloak, circuit breaker implementation, Kafka-based event-driven architecture, and Dockerization for seamless deployment.",
+        WebsiteLink:"",
+        GithubCode:"https://github.com/dhruval306/Spring_boot-Microservices"
+    },
+    {
+        id: 2,
         Name: "Uber-Clone",
         ImageLink:"https://i.ibb.co/qgqM00b/uber.png",
         Technology: "Next.js, Advanced JavaScript, React Hooks, Mapbox, Tailwind CSS, Rest API",
@@ -10,7 +19,7 @@ const Projects = [
         GithubCode:"https://github.com/dhruval306/uber_Clone"
     },
     {
-        id: 2,
+        id: 4,
         Name: "SpringAuth System",
         ImageLink:"https://i.ibb.co/4M4Dsx6/spring.png",
         Technology: "Java 8, Spring Boot, Spring Security, PostgreSQL Encryption",
@@ -27,15 +36,7 @@ const Projects = [
         WebsiteLink:"",
         GithubCode:"https://github.com/dhruval306/Mechtech"
     },
-    {
-        id: 4,
-        Name: "Microservices Architecture",
-        ImageLink:"https://i.ibb.co/my0bGN6/microservice.png",
-        Technology: "Java 17, Spring Boot, Kafka, KeyClock, Spring Security, Spring Data JPA, Eureka, MySQL, MongoDB, Docker",
-        Description: "This project is a comprehensive approach to microservice architecture. It encompasses high-level and logical architecture design, service construction, inter-process communication, service discovery with Netflix Eureka, API Gateway establishment using Spring Cloud Gateway, secure microservices authentication via Keycloak, circuit breaker implementation, Kafka-based event-driven architecture, and Dockerization for seamless deployment.",
-        WebsiteLink:"",
-        GithubCode:"https://github.com/dhruval306/Spring_boot-Microservices"
-    },
+    
     {
         id: 5,
         Name: "One Stop Jewel",
