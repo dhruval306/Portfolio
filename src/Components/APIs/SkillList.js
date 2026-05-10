@@ -1,19 +1,57 @@
+/** Technical skills aligned with resume — grouped for scanning. */
 const SkillList = [
-    {
-        category: 'Frontend',
-        skills: ['HTML5', 'CSS3', 'JavaScript', 'React.js', 'Bootstrap', 'Tailwind CSS', 'Next.js', 'Vue.js'],
-    },
-    {
-        category: 'Backend',
-        skills: ['Java', 'Node.js', 'Express.js', 'Hibernate', 'Spring Boot', 'Spring Security', 'Spring Data JPA'],
-    },
-    {
-        category: 'Database',
-        skills: ['SQL', 'MongoDB', 'PostgreSQL', 'Elasticsearch'],
-    },
-    {
-        category: 'Devops',
-        skills: ['Docker', 'Kubernetes', 'Git', 'Jenkins', 'AWS'],
-    },
+  {
+    category: "Languages & web",
+    skills: [
+      "Python",
+      "Java 8+",
+      "JavaScript",
+      "TypeScript",
+      "SQL",
+      "React",
+      "Angular",
+      "Electron",
+    ],
+  },
+  {
+    category: "Backend & APIs",
+    skills: [
+      "Spring Boot",
+      "Spring Security",
+      "Spring Cloud",
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+    ],
+  },
+  {
+    category: "Data & analytics",
+    skills: [
+      "Power BI",
+      "PostgreSQL",
+      "MongoDB",
+      "MySQL",
+      "Redis",
+      "Kafka",
+      "Elasticsearch",
+    ],
+  },
+  {
+    category: "Automation & integration",
+    skills: [
+      "Power Automate",
+      "Power Platform",
+      "N8N",
+      "ERP integration",
+      "Docker",
+      "Jenkins",
+      "Kubernetes",
+    ],
+  },
+  {
+    category: "Cloud & delivery",
+    skills: ["AWS", "Azure", "Git", "SharePoint", "IntelliJ", "VS Code", "AI-assisted delivery"],
+  },
 ];
+
 export default SkillList;

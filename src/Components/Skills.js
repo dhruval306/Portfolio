@@ -1,46 +1,37 @@
-import React from 'react';
-import SkillList from './APIs/SkillList';
-import Project from './APIs/ProjectList';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import SkillCard from './Cards/SkillCard';
+import React from "react";
+import SkillList from "./APIs/SkillList";
+import SkillCard from "./Cards/SkillCard";
+import Reveal from "./Reveal";
 
 const Skills = () => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  md:p-0'>
-      {/* Left Column: Skill List */}
-      <div className='col-span-2 p-6 md:col-span-2 lg:col-span-3'>
-        <div className='text-xl font-medium mt-2 text-zinc-200 mb-5'>What I Know</div>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5'>
-          {/* Mapping through SkillList and rendering SkillCard for each item */}
-          {SkillList.map((val, index) => (
-            <SkillCard key={index} val={val} index={index} />
-          ))}
-        </div>
-      </div>
+    <section
+      id="skills"
+      className="section-screen scroll-mt-28 relative flex flex-col justify-center overflow-hidden px-4 py-10 sm:px-6 sm:py-12"
+    >
+      {/* Subtle section mesh */}
+      <div className="pointer-events-none absolute inset-0 section-mesh" aria-hidden />
 
-      {/* Right Column: More Projects */}
-      <div className='grid bg-cardPrimary gap-6 p-6 shadow-lg'>
-        <div className='text-xl font-medium mt-2 text-zinc-200'>More Projects</div>
-        <div className='grid grid-cols-1 gap-4 rounded-lg'>
-          {Project.slice(4).map((val, index) => (
-            <a
-              key={index}
-              href={val.GithubCode}
-              target='_blank'
-              className='hover:border border-primary border-opacity-0 transition duration-300'
-            >
-              <div className='flex items-center gap-1 text-primary rounded-lg'>
-                <div className='flex flex-1 flex-col px-4 py-2'>
-                  <div className='flex text-sm font-medium'>{val.Name}</div>
-                  <div className='flex text-info text-xs'>{val.Description}</div>
-                </div>
-                <KeyboardArrowRightIcon />
-              </div>
-            </a>
+      <div className="relative mx-auto max-w-6xl">
+        <Reveal className="max-w-2xl">
+          <p className="section-label">Toolkit</p>
+          <h2 className="mt-3 font-display text-4xl font-black tracking-[-0.03em] text-[var(--text-highlight)] sm:text-5xl">
+            How I ship
+          </h2>
+          <p className="mt-4 text-base leading-relaxed text-[var(--text-primary)]">
+            Languages through cloud—Python, Java, TypeScript, Spring, React, Angular, Electron, Power BI, data stores, automation, and DevOps tooling.
+          </p>
+        </Reveal>
+
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-10 sm:gap-5 sm:grid-cols-2 xl:grid-cols-3">
+          {SkillList.map((val, index) => (
+            <Reveal key={val.category} delay={index * 70} duration={700}>
+              <SkillCard val={val} index={index} />
+            </Reveal>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
