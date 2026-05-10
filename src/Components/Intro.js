@@ -21,7 +21,7 @@ const Intro = () => {
   return (
     <section
       id="top"
-      className="section-screen relative flex flex-col justify-start overflow-hidden pb-12 pt-[7.5rem] pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] sm:justify-center sm:pb-12 sm:pl-[max(1.5rem,env(safe-area-inset-left))] sm:pr-[max(1.5rem,env(safe-area-inset-right))] sm:pt-36 lg:justify-center lg:pt-44"
+      className="section-screen relative flex flex-col justify-start overflow-hidden pb-12 pt-[5rem] pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] sm:pb-12 sm:pl-[max(1.5rem,env(safe-area-inset-left))] sm:pr-[max(1.5rem,env(safe-area-inset-right))] sm:pt-[6rem] lg:pt-[6.5rem]"
     >
       {/* Background mesh */}
       <div className="pointer-events-none absolute inset-0 hero-mesh" aria-hidden />
@@ -86,8 +86,10 @@ const Intro = () => {
           <Reveal delay={80} duration={720}>
             <h1 className="font-display text-[clamp(1.75rem,9vw,4.25rem)] font-black leading-[1.12] tracking-[-0.035em] text-[var(--text-highlight)] md:text-[clamp(2.25rem,6vw,4.25rem)] md:leading-[1.06] md:tracking-[-0.03em] flex flex-col gap-1">
               <span>I build software</span>
-              <span>that makes businesses</span>
-              <span className="accent-word">work</span>
+              <span>
+                that makes <span className="accent-word">businesses</span>
+              </span>
+              <span className="accent-word">work.</span>
             </h1>
           </Reveal>
 
@@ -97,41 +99,46 @@ const Intro = () => {
               ERP consultant and developer with <span className="text-[var(--text-highlight)]">5+ years</span> delivering
               integrations, internal apps, automation, and analytics—end to end—for finance, sales, and operations.
             </p>
-            <p className="mt-2 max-w-xl text-[11px] leading-relaxed text-[var(--text-info)] sm:text-sm">
+            <p
+              className="mt-2 max-w-xl text-[10px] leading-snug text-[var(--text-secondary)] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden sm:text-sm sm:leading-relaxed sm:text-[var(--text-info)] max-sm:whitespace-nowrap max-sm:overflow-x-auto max-sm:pb-0.5"
+              title="Halifax, NS · Flourish · ERP &amp; Power Platform · Consulting & freelance"
+            >
               Halifax, NS · Flourish · ERP &amp; Power Platform · Consulting &amp; freelance
             </p>
           </Reveal>
 
-          {/* CTAs — magnetic only on primary to keep grid aligned */}
+          {/* CTAs — mobile: one row + icon-only socials; sm+: labeled buttons */}
           <Reveal delay={180} duration={640}>
-            <div className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-stretch sm:gap-3">
-              <MagneticWrap className="w-full sm:w-auto sm:shrink-0" strength={0.22}>
+            <div className="flex flex-row flex-wrap items-center gap-2 sm:gap-3">
+              <MagneticWrap className="min-w-0 flex-1 sm:w-auto sm:shrink-0 sm:flex-initial" strength={0.22}>
                 <a
                   href="#work"
-                  className="btn-glow inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[var(--accent)] px-5 py-3 text-sm font-bold text-[var(--bg-primary)] transition-all duration-200 hover:brightness-110 active:scale-[0.98] motion-reduce:active:scale-100 sm:w-auto cursor-pointer"
+                  className="btn-glow inline-flex min-h-[44px] w-full items-center justify-center gap-1.5 rounded-xl bg-[var(--accent)] px-3 py-2.5 text-xs font-bold text-[var(--bg-primary)] transition-all duration-200 hover:brightness-110 active:scale-[0.98] motion-reduce:active:scale-100 sm:min-h-[48px] sm:w-auto sm:gap-2 sm:px-5 sm:py-3 sm:text-sm cursor-pointer"
                 >
-                  View my work
-                  <ArrowDownwardIcon sx={{ fontSize: 16 }} />
+                  <span className="truncate">View my work</span>
+                  <ArrowDownwardIcon sx={{ fontSize: 16 }} className="shrink-0" />
                 </a>
               </MagneticWrap>
-              <div className="grid min-w-0 grid-cols-2 gap-2 sm:flex sm:min-w-0 sm:flex-1 sm:gap-2">
+              <div className="flex shrink-0 gap-2 sm:grid sm:min-w-0 sm:flex-1 sm:grid-cols-2 sm:gap-2">
                 <a
                   href="https://www.linkedin.com/in/dhruvalsoni/"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-3 py-3 text-sm font-semibold text-[var(--text-highlight)] backdrop-blur-sm transition-all duration-200 hover:border-[var(--accent)]/30 hover:bg-white/[0.07] active:scale-[0.98] motion-reduce:active:scale-100 cursor-pointer"
+                  aria-label="LinkedIn profile"
+                  className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-0 py-0 text-sm font-semibold text-[var(--text-highlight)] backdrop-blur-sm transition-all duration-200 hover:border-[var(--accent)]/30 hover:bg-white/[0.07] active:scale-[0.98] motion-reduce:active:scale-100 sm:min-h-[48px] sm:w-full sm:px-3 sm:py-3 cursor-pointer"
                 >
-                  <LinkedInIcon sx={{ fontSize: 17 }} className="shrink-0 text-[var(--accent)]" />
-                  <span className="truncate">LinkedIn</span>
+                  <LinkedInIcon sx={{ fontSize: { xs: 22, sm: 17 } }} className="shrink-0 text-[var(--accent)]" />
+                  <span className="hidden truncate sm:inline">LinkedIn</span>
                 </a>
                 <a
                   href="https://github.com/dhruval306"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-3 py-3 text-sm font-semibold text-[var(--text-highlight)] backdrop-blur-sm transition-all duration-200 hover:border-[var(--accent)]/30 hover:bg-white/[0.07] active:scale-[0.98] motion-reduce:active:scale-100 cursor-pointer"
+                  aria-label="GitHub profile"
+                  className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-0 py-0 text-sm font-semibold text-[var(--text-highlight)] backdrop-blur-sm transition-all duration-200 hover:border-[var(--accent)]/30 hover:bg-white/[0.07] active:scale-[0.98] motion-reduce:active:scale-100 sm:min-h-[48px] sm:w-full sm:px-3 sm:py-3 cursor-pointer"
                 >
-                  <GitHubIcon sx={{ fontSize: 17 }} className="shrink-0 text-[var(--accent)]" />
-                  <span className="truncate">GitHub</span>
+                  <GitHubIcon sx={{ fontSize: { xs: 22, sm: 17 } }} className="shrink-0 text-[var(--accent)]" />
+                  <span className="hidden truncate sm:inline">GitHub</span>
                 </a>
               </div>
             </div>

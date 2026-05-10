@@ -256,13 +256,47 @@ h1, h2, h3, .font-display {
     line-height: 1;
 }
 
-/* Section label */
-.section-label {
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--accent);
+/* Section label — in components layer so Tailwind text-* utilities override color */
+@layer components {
+    .section-label {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+    }
+
+    /**
+     * Tiersubsection markers (Projects) — vertical pill reads clearly on dark bg;
+     * horizontal hairlines were easy to lose next to muted labels.
+     */
+    .tier-marker {
+        width: 0.28rem;
+        height: 1.35rem;
+        flex-shrink: 0;
+        border-radius: 9999px;
+    }
+
+    .tier-marker--accent {
+        background: var(--accent);
+        box-shadow:
+            0 0 16px var(--accent-glow),
+            0 0 1px rgba(255, 255, 255, 0.35);
+    }
+
+    .tier-marker--violet {
+        background: var(--violet);
+        box-shadow:
+            0 0 16px var(--violet-glow),
+            0 0 1px rgba(255, 255, 255, 0.35);
+    }
+
+    .tier-marker--muted {
+        background: linear-gradient(180deg, #e4e4ea 0%, #9d9dae 100%);
+        box-shadow:
+            0 0 12px rgba(255, 255, 255, 0.18),
+            0 0 1px rgba(255, 255, 255, 0.45);
+    }
 }
 
 /* Scrollbar */

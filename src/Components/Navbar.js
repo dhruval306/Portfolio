@@ -23,7 +23,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] pt-[max(1rem,env(safe-area-inset-top))] motion-safe:animate-fade-in-down motion-reduce:animate-none">
+    <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] pt-[env(safe-area-inset-top)] motion-safe:animate-fade-in-down motion-reduce:animate-none">
       <header
         className={`w-full max-w-5xl rounded-2xl border transition-all duration-300 ${
           scrolled
@@ -31,7 +31,7 @@ const Navbar = () => {
             : "border-white/6 bg-[var(--bg-primary)]/70 backdrop-blur-lg"
         }`}
       >
-        <nav className="flex items-center justify-between gap-4 px-5 py-3">
+        <nav className="flex items-center justify-between gap-4 px-5 py-2.5">
           <a
             href="#top"
             className="font-display text-base font-bold tracking-tight text-[var(--text-highlight)] transition hover:text-[var(--accent)]"

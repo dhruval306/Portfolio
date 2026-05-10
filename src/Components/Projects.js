@@ -35,9 +35,9 @@ const Projects = () => {
         {featured.length > 0 && (
           <>
             <Reveal className="mt-10 sm:mt-12" delay={40}>
-              <div className="flex items-center gap-4">
-                <span className="h-px w-6 bg-[var(--accent)]/40" aria-hidden />
-                <span className="section-label text-[var(--text-info)]">Flagship work</span>
+              <div className="flex items-center gap-3">
+                <span className="tier-marker tier-marker--accent" aria-hidden />
+                <span className="section-label text-[var(--text-secondary)]">Flagship work</span>
               </div>
             </Reveal>
             <div className="mt-5 grid grid-cols-1 gap-7 lg:grid-cols-2">
@@ -56,9 +56,9 @@ const Projects = () => {
               className={`max-w-2xl ${featured.length > 0 ? "mt-12 sm:mt-16" : "mt-10 sm:mt-12"}`}
               delay={40}
             >
-              <div className="flex items-center gap-4">
-                <span className="h-px w-6 bg-[var(--violet)]/40" aria-hidden />
-                <span className="section-label" style={{ color: "var(--violet)" }}>Analytics portfolio</span>
+              <div className="flex items-center gap-3">
+                <span className="tier-marker tier-marker--violet" aria-hidden />
+                <span className="section-label text-[var(--violet)]">Analytics portfolio</span>
               </div>
               <h3 className="mt-3 font-display text-2xl font-bold tracking-tight text-[var(--text-highlight)] sm:text-3xl">
                 Power BI · dashboards by domain
@@ -83,9 +83,9 @@ const Projects = () => {
               className={`max-w-2xl ${featured.length > 0 || showPowerBi ? "mt-12 sm:mt-16" : "mt-10 sm:mt-12"}`}
               delay={40}
             >
-              <div className="flex items-center gap-4">
-                <span className="h-px w-6 bg-white/20" aria-hidden />
-                <span className="section-label text-[var(--text-info)]">Open source &amp; demos</span>
+              <div className="flex items-center gap-3">
+                <span className="tier-marker tier-marker--muted" aria-hidden />
+                <span className="section-label text-[var(--text-secondary)]">Open source &amp; demos here</span>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-[var(--text-secondary)]">
                 Sharable repos and live experiments—same discipline as client delivery, packaged so you can inspect the code.
