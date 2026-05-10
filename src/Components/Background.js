@@ -67,12 +67,12 @@ const Background = () => {
   return (
     <section
       id="about"
-      className="section-screen scroll-mt-28 border-t border-white/[0.06] px-4 py-10 sm:px-6 sm:py-12"
+      className="section-screen scroll-mt-28 border-t border-white/[0.06] py-10 pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] sm:py-12 sm:pl-[max(1.5rem,env(safe-area-inset-left))] sm:pr-[max(1.5rem,env(safe-area-inset-right))]"
     >
       <div className="mx-auto max-w-6xl">
         <Reveal className="max-w-2xl">
           <p className="section-label">Background</p>
-          <h2 className="mt-3 font-display text-4xl font-black tracking-[-0.03em] text-[var(--text-highlight)] sm:text-5xl">
+          <h2 className="mt-3 font-display text-3xl font-black tracking-[-0.03em] text-[var(--text-highlight)] sm:text-4xl md:text-5xl">
             Experience &amp; education
           </h2>
           <p className="mt-4 text-base leading-relaxed text-[var(--text-primary)]">

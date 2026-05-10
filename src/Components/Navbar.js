@@ -23,7 +23,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4 motion-safe:animate-fade-in-down motion-reduce:animate-none">
+    <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] pt-[max(1rem,env(safe-area-inset-top))] motion-safe:animate-fade-in-down motion-reduce:animate-none">
       <header
         className={`w-full max-w-5xl rounded-2xl border transition-all duration-300 ${
           scrolled
@@ -82,7 +82,7 @@ const Navbar = () => {
 
           <button
             type="button"
-            className="inline-flex rounded-xl p-2 text-[var(--text-highlight)] transition hover:bg-white/[0.06] md:hidden cursor-pointer"
+            className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl text-[var(--text-highlight)] transition hover:bg-white/[0.06] md:hidden cursor-pointer"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label={open ? "Close menu" : "Open menu"}
@@ -98,15 +98,37 @@ const Navbar = () => {
                 <a
                   key={l.href}
                   href={l.href}
-                  className="rounded-xl px-3 py-3 text-sm font-medium text-[var(--text-primary)] transition hover:bg-white/[0.05] hover:text-[var(--text-highlight)] cursor-pointer"
+                  className="rounded-xl px-3 py-3.5 text-base font-medium text-[var(--text-primary)] transition hover:bg-white/[0.05] hover:text-[var(--text-highlight)] cursor-pointer"
                   onClick={() => setOpen(false)}
                 >
                   {l.label}
                 </a>
               ))}
+              <div className="mt-2 flex items-center justify-center gap-2 border-t border-white/[0.06] pt-3">
+                <a
+                  href="https://www.linkedin.com/in/dhruvalsoni/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl text-[var(--text-secondary)] transition hover:bg-white/[0.06] hover:text-[var(--accent)] cursor-pointer"
+                  aria-label="LinkedIn"
+                  onClick={() => setOpen(false)}
+                >
+                  <LinkedInIcon sx={{ fontSize: 22 }} />
+                </a>
+                <a
+                  href="https://github.com/dhruval306"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-xl text-[var(--text-secondary)] transition hover:bg-white/[0.06] hover:text-[var(--accent)] cursor-pointer"
+                  aria-label="GitHub"
+                  onClick={() => setOpen(false)}
+                >
+                  <GitHubIcon sx={{ fontSize: 22 }} />
+                </a>
+              </div>
               <a
                 href="#contact"
-                className="mt-2 rounded-xl bg-[var(--accent)] px-3 py-3 text-center text-sm font-bold text-[var(--bg-primary)] transition hover:brightness-110 cursor-pointer"
+                className="mt-2 rounded-xl bg-[var(--accent)] px-3 py-3.5 text-center text-base font-bold text-[var(--bg-primary)] transition hover:brightness-110 cursor-pointer"
                 onClick={() => setOpen(false)}
               >
                 Let&apos;s talk

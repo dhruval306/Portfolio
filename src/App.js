@@ -6,12 +6,17 @@ import Background from "./Components/Background";
 import Certifications from "./Components/Certifications";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+import ScrollSignal from "./Components/ScrollSignal";
 
 const App = () => {
   return (
     <>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+      <ScrollSignal />
       <Navbar />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <Intro />
         <Projects />
         <Skills />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useRef, useState } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -9,6 +9,31 @@ const MEDIA_FRAME = "h-[220px] sm:h-[240px]";
 
 const ProjectCard = ({ val }) => {
   const reducedMotion = useReducedMotion();
+  const cardRef = useRef(null);
+  const [tilt, setTilt] = useState({ rx: 0, ry: 0 });
+
+  const handleMove = useCallback(
+    (e) => {
+      if (reducedMotion || !cardRef.current) return;
+      const rect = cardRef.current.getBoundingClientRect();
+      const px = (e.clientX - rect.left) / rect.width - 0.5;
+      const py = (e.clientY - rect.top) / rect.height - 0.5;
+      setTilt({ rx: py * -9, ry: px * 11 });
+    },
+    [reducedMotion]
+  );
+
+  const handleLeave = useCallback(() => {
+    setTilt({ rx: 0, ry: 0 });
+  }, []);
+
+  const tiltStyle =
+    reducedMotion || (tilt.rx === 0 && tilt.ry === 0)
+      ? undefined
+      : {
+          transform: `perspective(960px) rotateX(${tilt.rx}deg) rotateY(${tilt.ry}deg)`,
+        };
+
   const stack = val.Technology.split(",").map((s) => s.trim()).filter(Boolean);
   const pills = stack.slice(0, 5);
   const more = stack.length - pills.length;
@@ -100,13 +125,22 @@ const ProjectCard = ({ val }) => {
   );
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[var(--card-border)] bg-[var(--card-primary)] shadow-[0_24px_60px_-40px_rgba(0,0,0,0.9)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-[rgba(34,197,94,0.2)] hover:shadow-[0_32px_64px_-28px_rgba(0,0,0,0.85),0_0_0_1px_rgba(34,197,94,0.05)] motion-reduce:hover:translate-y-0 cursor-default">
+    <article
+      ref={cardRef}
+      className="group h-full cursor-default [perspective:1100px]"
+      onMouseMove={handleMove}
+      onMouseLeave={handleLeave}
+    >
+      <div
+        className="flex h-full flex-col overflow-hidden rounded-2xl border border-[var(--card-border)] bg-[var(--card-primary)] shadow-[0_24px_60px_-40px_rgba(0,0,0,0.9)] transition-[transform,box-shadow,border-color] duration-300 ease-out will-change-transform hover:border-[rgba(34,197,94,0.2)] hover:shadow-[0_32px_64px_-28px_rgba(0,0,0,0.85),0_0_0_1px_rgba(34,197,94,0.05)] motion-reduce:hover:translate-y-0"
+        style={tiltStyle}
+      >
       {/* Image area */}
       <div
         className={`relative flex w-full shrink-0 overflow-hidden border-b border-white/[0.05] bg-[#0a090f] ${MEDIA_FRAME}`}
       >
         {!val.ImageLinkSecondary ? (
-          <div className="flex h-full min-h-0 w-full flex-col items-center justify-center px-4 py-3">
+          <div className="relative flex h-full min-h-0 w-full flex-col items-center justify-center px-4 py-3">
             <img
               loading="lazy"
               decoding="async"
@@ -114,6 +148,12 @@ const ProjectCard = ({ val }) => {
               alt={val.Name}
               className="max-h-full max-w-full object-contain object-center transition-transform duration-500 motion-safe:group-hover:scale-[1.03] motion-reduce:group-hover:scale-100"
             />
+            <div
+              className="pointer-events-none absolute inset-0 z-[12] overflow-hidden opacity-0 motion-safe:transition-opacity motion-safe:duration-300 motion-safe:group-hover:opacity-100 motion-reduce:hidden"
+              aria-hidden
+            >
+              <div className="absolute inset-0 card-media-scan opacity-50" />
+            </div>
           </div>
         ) : reducedMotion ? (
           dualStaticGallery
@@ -123,7 +163,12 @@ const ProjectCard = ({ val }) => {
 
         {val.featured && (
           <span className="absolute left-3 top-3 z-20 rounded-full bg-[var(--accent)] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[var(--bg-primary)] shadow-[0_0_12px_rgba(34,197,94,0.4)]">
-            Featured
+            Flagship
+          </span>
+        )}
+        {val.representativeImagery && (
+          <span className="absolute right-3 top-3 z-20 max-w-[55%] rounded-full border border-white/10 bg-[#0a090f]/90 px-2 py-1 text-[9px] font-semibold uppercase leading-tight tracking-wide text-[var(--text-info)] backdrop-blur-sm">
+            Representative visuals · NDA
           </span>
         )}
       </div>
@@ -138,6 +183,11 @@ const ProjectCard = ({ val }) => {
             {val.role}
             {val.year && val.year !== "—" ? ` · ${val.year}` : ""}
           </p>
+          {val.showcase && (
+            <p className="mt-1.5 text-[10px] font-semibold uppercase tracking-wider text-[var(--violet)]">
+              Open-source demo
+            </p>
+          )}
         </div>
 
         <p className="text-sm leading-relaxed text-[var(--text-primary)]">{val.Description}</p>
@@ -206,6 +256,7 @@ const ProjectCard = ({ val }) => {
             </span>
           )}
         </div>
+      </div>
       </div>
     </article>
   );

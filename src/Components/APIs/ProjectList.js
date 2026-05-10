@@ -1,10 +1,14 @@
-/** Projects — solution-first blurbs; stack lives in Technology + highlights. */
+/** Projects — solution-first blurbs; stack lives in Technology + highlights.
+ *  representativeImagery: stock art standing in for NDA UI
+ *  showcase: portfolio / open-source demos (not client delivery)
+ */
 const Projects = [
   {
     id: 8,
     Name: "Aweigh — By Flourish",
     role: "Electron · ERP integration",
     year: "2024–present",
+    representativeImagery: true,
     ImageLink:
       "https://images.unsplash.com/photo-1684695747561-9372850cf165?auto=format&fit=crop&w=1600&q=85",
     Technology:
@@ -24,6 +28,7 @@ const Projects = [
     Name: "STO — By Flourish",
     role: "React Native + Electron · Spire ERP",
     year: "2024–present",
+    representativeImagery: true,
     /** Distinct from Aweigh — field / tablet ops; not duplicate warehouse stock */
     ImageLink:
       "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1600&q=85",
@@ -44,6 +49,7 @@ const Projects = [
     Name: "InvoiceTracker",
     role: "Electron · AI extraction · finance ops",
     year: "2024–present",
+    representativeImagery: true,
     ImageLink:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=85",
     Technology:
@@ -157,10 +163,11 @@ const Projects = [
     WebsiteLink: "",
     GithubCode: "https://github.com/dhruval306/Spring_boot-Microservices",
     featured: false,
+    showcase: true,
   },
   {
     id: 2,
-    Name: "Uber-Clone",
+    Name: "Mobility & routing demo",
     role: "Next.js · maps",
     year: "2023",
     ImageLink: "https://i.ibb.co/qgqM00b/uber.png",
@@ -174,6 +181,7 @@ const Projects = [
     WebsiteLink: "https://uber-clone-ghdrdrlis-dhruval306.vercel.app",
     GithubCode: "https://github.com/dhruval306/uber_Clone",
     featured: false,
+    showcase: true,
   },
   {
     id: 4,
@@ -191,6 +199,7 @@ const Projects = [
     WebsiteLink: "",
     GithubCode: "https://github.com/dhruval306/UserAuthentication",
     featured: false,
+    showcase: true,
   },
   {
     id: 3,
@@ -208,6 +217,7 @@ const Projects = [
     WebsiteLink: "",
     GithubCode: "https://github.com/dhruval306/Mechtech",
     featured: false,
+    showcase: true,
   },
   {
     id: 5,
@@ -225,6 +235,7 @@ const Projects = [
     WebsiteLink: "",
     GithubCode: "https://github.com/dhruval306/OneStopJewel",
     featured: false,
+    showcase: true,
   },
 ];
 

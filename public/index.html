@@ -10,29 +10,31 @@
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="canonical" href="https://dhruvalportfolio.com/" />
     <meta name="theme-color" content="#07070d" />
     <meta
       name="description"
       content="Dhruval Soni — ERP consultant & developer (5+ yrs), Halifax: ERP implementation, automation, APIs, Power BI, Java, React, Power Platform, Azure."
     />
-    <!-- Social preview — update og:url + og:image if you use a custom domain -->
+    <!-- Social preview uses dhruvalportfolio.com — swap og:image to a 1200×630 branded graphic when ready -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Dhruval Soni · Full-stack developer & systems builder" />
     <meta
       property="og:description"
       content="Dhruval Soni — full-stack developer & systems builder in Halifax: Java, React, Power Platform, ERP integrations, automation, AI-augmented delivery."
     />
-    <meta property="og:url" content="https://dhruval306.github.io/Portfolio/" />
-    <meta property="og:image" content="https://dhruval306.github.io/Portfolio/Images/cover.jpeg" />
-    <meta property="og:image:alt" content="Dhruval Soni · Portfolio preview" />
+    <meta property="og:url" content="https://dhruvalportfolio.com/" />
+    <meta property="og:image" content="https://dhruvalportfolio.com/logo512.png" />
+    <meta property="og:image:alt" content="Dhruval Soni · Portfolio" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Dhruval Soni · Full-stack developer & systems builder" />
     <meta
       name="twitter:description"
       content="Full-stack developer & systems builder · Halifax · Java, React, Power Platform, ERP, automation."
     />
-    <meta name="twitter:image" content="https://dhruval306.github.io/Portfolio/Images/cover.jpeg" />
+    <meta name="twitter:url" content="https://dhruvalportfolio.com/" />
+    <meta name="twitter:image" content="https://dhruvalportfolio.com/logo512.png" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -53,6 +55,20 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dhruval Soni",
+        "jobTitle": "ERP Consultant & Developer",
+        "description": "ERP implementation, automation, integrations, Power BI, and full-stack delivery.",
+        "url": "https://dhruvalportfolio.com/",
+        "sameAs": [
+          "https://www.linkedin.com/in/dhruvalsoni/",
+          "https://github.com/dhruval306"
+        ]
+      }
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

@@ -3,6 +3,7 @@ import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Reveal from "./Reveal";
+import MagneticWrap from "./MagneticWrap";
 import ProjectList from "./APIs/ProjectList.js";
 
 const portfolioProjectCount = ProjectList.length;
@@ -20,7 +21,7 @@ const Intro = () => {
   return (
     <section
       id="top"
-      className="section-screen relative flex flex-col justify-center overflow-hidden px-4 pb-10 pt-[5.5rem] sm:px-6 sm:pb-12 sm:pt-28 lg:pt-32"
+      className="section-screen relative flex flex-col justify-start overflow-hidden pb-12 pt-[7.5rem] pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] sm:justify-center sm:pb-12 sm:pl-[max(1.5rem,env(safe-area-inset-left))] sm:pr-[max(1.5rem,env(safe-area-inset-right))] sm:pt-36 lg:justify-center lg:pt-44"
     >
       {/* Background mesh */}
       <div className="pointer-events-none absolute inset-0 hero-mesh" aria-hidden />
@@ -39,11 +40,35 @@ const Intro = () => {
         aria-hidden
       />
 
-      <div className="relative mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(300px,380px)] lg:items-center lg:gap-14">
+      <div className="relative mx-auto grid max-w-6xl gap-6 sm:gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(300px,380px)] lg:items-center lg:gap-14">
         {/* Left content */}
-        <div className="min-w-0">
-          {/* Eyebrow */}
+        <div className="min-w-0 flex flex-col gap-6 sm:gap-8">
+          {/* Mobile: identity row — avoids a tall wall of text with no visual anchor */}
           <Reveal>
+            <div className="flex items-center gap-4 sm:hidden">
+              <div className="relative shrink-0">
+                <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-[var(--accent)]/35 to-[var(--violet)]/25 opacity-90 blur-md" aria-hidden />
+                <img
+                  alt="Dhruval Soni"
+                  decoding="async"
+                  loading="eager"
+                  src="https://i.ibb.co/KcTJt0T5/1000017273.jpg"
+                  className="relative h-[4.5rem] w-[4.5rem] rounded-2xl border border-white/[0.12] object-cover shadow-lg ring-2 ring-black/20"
+                />
+              </div>
+              <div className="min-w-0">
+                <p className="font-display text-base font-bold tracking-tight text-[var(--text-highlight)]">
+                  Dhruval Soni
+                </p>
+                <p className="mt-0.5 text-xs leading-snug text-[var(--text-secondary)]">
+                  ERP consultant · Halifax · Available for projects
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Eyebrow — desktop / sm+ ; hidden on xs when mobile row carries context */}
+          <Reveal className="hidden sm:block">
             <div className="flex flex-wrap items-center gap-3">
               <span className="section-label">Halifax, NS</span>
               <span className="h-px w-6 bg-white/15" aria-hidden />
@@ -57,71 +82,70 @@ const Intro = () => {
             </div>
           </Reveal>
 
-          {/* Main headline */}
-          <Reveal className="mt-4 sm:mt-5" delay={80} duration={720}>
-            <h1
-              className="font-display font-black leading-[1.05] tracking-[-0.03em] text-[var(--text-highlight)]"
-              style={{ fontSize: "clamp(2rem, 6vw, 4.25rem)" }}
-            >
-              I build software
-              <br />
-              that makes{" "}
-              <span className="accent-word">businesses</span>
-              <br />
-              <span className="accent-word">work.</span>
+          {/* Main headline — flex column = consistent rhythm on all breakpoints */}
+          <Reveal delay={80} duration={720}>
+            <h1 className="font-display text-[clamp(1.75rem,9vw,4.25rem)] font-black leading-[1.12] tracking-[-0.035em] text-[var(--text-highlight)] md:text-[clamp(2.25rem,6vw,4.25rem)] md:leading-[1.06] md:tracking-[-0.03em] flex flex-col gap-1">
+              <span>Software that</span>
+              <span>
+                fits the <span className="accent-word">business</span>,
+              </span>
+              <span className="accent-word">not the reverse.</span>
             </h1>
           </Reveal>
 
           {/* Sub-headline — single compact block */}
-          <Reveal className="mt-3 sm:mt-4" delay={130} duration={680}>
-            <p className="max-w-xl text-base font-medium leading-snug text-[var(--text-primary)] sm:text-lg">
-              ERP consultant &amp; developer — <span className="text-[var(--text-highlight)]">5+ years</span> in ERP,
-              automation, integration, and analytics. End-to-end apps, APIs, and operational insights across finance,
-              sales, and operations.
+          <Reveal delay={130} duration={680}>
+            <p className="max-w-xl text-[0.9375rem] font-medium leading-relaxed text-[var(--text-primary)] sm:text-lg sm:leading-snug">
+              ERP consultant and developer with <span className="text-[var(--text-highlight)]">5+ years</span> delivering
+              integrations, internal apps, automation, and analytics—end to end—for finance, sales, and operations.
             </p>
-            <p className="mt-2 text-xs text-[var(--text-info)] sm:text-sm">
-              Halifax · Flourish Management Consulting · Open to freelance · Full-stack · Power Platform · AI-ready
+            <p className="mt-2 max-w-xl text-[11px] leading-relaxed text-[var(--text-info)] sm:text-sm">
+              Halifax, NS · Flourish · ERP &amp; Power Platform · Consulting &amp; freelance
             </p>
           </Reveal>
 
-          {/* CTAs */}
-          <Reveal className="mt-5 sm:mt-6" delay={180} duration={640}>
-            <div className="flex flex-wrap gap-2 sm:gap-3">
-              <a
-                href="#work"
-                className="btn-glow inline-flex items-center gap-2 rounded-xl bg-[var(--accent)] px-5 py-3 text-sm font-bold text-[var(--bg-primary)] transition-all duration-200 hover:brightness-110 active:scale-[0.98] motion-reduce:active:scale-100 cursor-pointer"
-              >
-                View my work
-                <ArrowDownwardIcon sx={{ fontSize: 16 }} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/dhruvalsoni/"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-[var(--text-highlight)] backdrop-blur-sm transition-all duration-200 hover:border-[var(--accent)]/30 hover:bg-white/[0.07] active:scale-[0.98] motion-reduce:active:scale-100 cursor-pointer"
-              >
-                <LinkedInIcon sx={{ fontSize: 17 }} className="text-[var(--accent)]" />
-                LinkedIn
-              </a>
-              <a
-                href="https://github.com/dhruval306"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-[var(--text-highlight)] backdrop-blur-sm transition-all duration-200 hover:border-[var(--accent)]/30 hover:bg-white/[0.07] active:scale-[0.98] motion-reduce:active:scale-100 cursor-pointer"
-              >
-                <GitHubIcon sx={{ fontSize: 17 }} className="text-[var(--accent)]" />
-                GitHub
-              </a>
+          {/* CTAs — magnetic only on primary to keep grid aligned */}
+          <Reveal delay={180} duration={640}>
+            <div className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-stretch sm:gap-3">
+              <MagneticWrap className="w-full sm:w-auto sm:shrink-0" strength={0.22}>
+                <a
+                  href="#work"
+                  className="btn-glow inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[var(--accent)] px-5 py-3 text-sm font-bold text-[var(--bg-primary)] transition-all duration-200 hover:brightness-110 active:scale-[0.98] motion-reduce:active:scale-100 sm:w-auto cursor-pointer"
+                >
+                  View my work
+                  <ArrowDownwardIcon sx={{ fontSize: 16 }} />
+                </a>
+              </MagneticWrap>
+              <div className="grid min-w-0 grid-cols-2 gap-2 sm:flex sm:min-w-0 sm:flex-1 sm:gap-2">
+                <a
+                  href="https://www.linkedin.com/in/dhruvalsoni/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-3 py-3 text-sm font-semibold text-[var(--text-highlight)] backdrop-blur-sm transition-all duration-200 hover:border-[var(--accent)]/30 hover:bg-white/[0.07] active:scale-[0.98] motion-reduce:active:scale-100 cursor-pointer"
+                >
+                  <LinkedInIcon sx={{ fontSize: 17 }} className="shrink-0 text-[var(--accent)]" />
+                  <span className="truncate">LinkedIn</span>
+                </a>
+                <a
+                  href="https://github.com/dhruval306"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-3 py-3 text-sm font-semibold text-[var(--text-highlight)] backdrop-blur-sm transition-all duration-200 hover:border-[var(--accent)]/30 hover:bg-white/[0.07] active:scale-[0.98] motion-reduce:active:scale-100 cursor-pointer"
+                >
+                  <GitHubIcon sx={{ fontSize: 17 }} className="shrink-0 text-[var(--accent)]" />
+                  <span className="truncate">GitHub</span>
+                </a>
+              </div>
             </div>
           </Reveal>
 
           {/* Tech chips */}
-          <Reveal className="mt-5 sm:mt-6" delay={220} duration={600}>
-            <div className="flex flex-wrap gap-1.5 sm:gap-2">
+          <Reveal delay={220} duration={600}>
+            <div className="flex flex-wrap gap-2 sm:gap-2">
               {chips.map((chip) => (
                 <span
                   key={chip}
-                  className="rounded-full border border-white/[0.07] bg-white/[0.03] px-2.5 py-1 text-[9px] font-semibold uppercase tracking-widest text-[var(--text-secondary)] sm:px-3 sm:text-[10px]"
+                  className="rounded-full border border-white/[0.07] bg-white/[0.03] px-2.5 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[var(--text-secondary)] sm:px-3 sm:text-[10px] sm:tracking-widest"
                 >
                   {chip}
                 </span>
@@ -130,10 +154,10 @@ const Intro = () => {
           </Reveal>
 
           {/* Stats strip */}
-          <Reveal className="mt-6 sm:mt-7" delay={260} duration={580}>
-            <div className="intro-stats-strip inline-flex max-w-full flex-wrap gap-5 rounded-2xl border border-white/[0.07] bg-white/[0.025] px-4 py-3 backdrop-blur-sm sm:gap-8 sm:px-6 sm:py-4">
+          <Reveal delay={260} duration={580}>
+            <div className="intro-stats-strip grid w-full grid-cols-2 gap-4 rounded-2xl border border-white/[0.07] bg-white/[0.025] px-4 py-4 backdrop-blur-sm sm:inline-flex sm:max-w-full sm:flex-wrap sm:gap-8 sm:px-6 sm:py-4">
               {stats.map((s) => (
-                <div key={s.label} className="flex min-w-[4.5rem] flex-col items-center gap-0.5">
+                <div key={s.label} className="flex flex-col items-center justify-center gap-1 sm:min-w-[4.5rem]">
                   <span className="stat-number">{s.value}</span>
                   <span className="text-center text-[9px] font-medium uppercase tracking-wider text-[var(--text-info)] sm:text-[10px]">
                     {s.label}

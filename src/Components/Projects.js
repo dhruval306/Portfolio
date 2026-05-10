@@ -12,12 +12,15 @@ const Projects = () => {
   const totalCount = Project.length;
 
   return (
-    <section id="work" className="section-screen scroll-mt-28 px-4 py-10 sm:px-6 sm:py-12">
+    <section
+      id="work"
+      className="section-screen scroll-mt-28 py-10 pl-[max(1rem,env(safe-area-inset-left))] pr-[max(1rem,env(safe-area-inset-right))] sm:py-12 sm:pl-[max(1.5rem,env(safe-area-inset-left))] sm:pr-[max(1.5rem,env(safe-area-inset-right))]"
+    >
       <div className="mx-auto max-w-6xl">
         <Reveal className="max-w-3xl">
           <p className="section-label">Selected work</p>
           <div className="mt-3 flex flex-wrap items-baseline gap-4">
-            <h2 className="font-display text-4xl font-black tracking-[-0.03em] text-[var(--text-highlight)] sm:text-5xl">
+            <h2 className="font-display text-3xl font-black tracking-[-0.03em] text-[var(--text-highlight)] sm:text-4xl md:text-5xl">
               Solutions I&apos;ve shipped
             </h2>
             <span className="rounded-full border border-[var(--accent)]/30 bg-[var(--accent)]/10 px-3 py-1 text-sm font-bold text-[var(--accent)]">
@@ -25,7 +28,7 @@ const Projects = () => {
             </span>
           </div>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-[var(--text-primary)]">
-            Built for real operations—each card covers the problem it solves, the leverage it creates, and the stack underneath. Source links where available.
+            Flourish products, analytics portfolios, and open-source demos—each card states the problem, the leverage, and the stack. Source and live links where available.
           </p>
         </Reveal>
 
@@ -34,7 +37,7 @@ const Projects = () => {
             <Reveal className="mt-10 sm:mt-12" delay={40}>
               <div className="flex items-center gap-4">
                 <span className="h-px w-6 bg-[var(--accent)]/40" aria-hidden />
-                <span className="section-label text-[var(--text-info)]">Featured</span>
+                <span className="section-label text-[var(--text-info)]">Flagship work</span>
               </div>
             </Reveal>
             <div className="mt-5 grid grid-cols-1 gap-7 lg:grid-cols-2">
@@ -77,13 +80,16 @@ const Projects = () => {
         {rest.length > 0 && (
           <>
             <Reveal
-              className={featured.length > 0 || showPowerBi ? "mt-12 sm:mt-16" : "mt-10 sm:mt-12"}
+              className={`max-w-2xl ${featured.length > 0 || showPowerBi ? "mt-12 sm:mt-16" : "mt-10 sm:mt-12"}`}
               delay={40}
             >
               <div className="flex items-center gap-4">
                 <span className="h-px w-6 bg-white/20" aria-hidden />
-                <span className="section-label text-[var(--text-info)]">More projects</span>
+                <span className="section-label text-[var(--text-info)]">Open source &amp; demos</span>
               </div>
+              <p className="mt-3 text-sm leading-relaxed text-[var(--text-secondary)]">
+                Sharable repos and live experiments—same discipline as client delivery, packaged so you can inspect the code.
+              </p>
             </Reveal>
             <div className="mt-5 grid grid-cols-1 gap-7 md:grid-cols-2 xl:grid-cols-3">
               {rest.map((val, index) => (
