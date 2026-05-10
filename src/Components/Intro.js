@@ -85,11 +85,9 @@ const Intro = () => {
           {/* Main headline — flex column = consistent rhythm on all breakpoints */}
           <Reveal delay={80} duration={720}>
             <h1 className="font-display text-[clamp(1.75rem,9vw,4.25rem)] font-black leading-[1.12] tracking-[-0.035em] text-[var(--text-highlight)] md:text-[clamp(2.25rem,6vw,4.25rem)] md:leading-[1.06] md:tracking-[-0.03em] flex flex-col gap-1">
-              <span>Software that</span>
-              <span>
-                fits the <span className="accent-word">business</span>,
-              </span>
-              <span className="accent-word">not the reverse.</span>
+              <span>I build software</span>
+              <span>that makes businesses</span>
+              <span className="accent-word">work</span>
             </h1>
           </Reveal>
 
